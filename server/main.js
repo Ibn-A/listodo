@@ -1,4 +1,4 @@
-import '../imports/api/tasks.js';
+import '../imports/api/tasks.js'; // Load tasks collection on the server
 import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
