@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Meteor } from 'meteor/meteor';
 
 import {Tasks } from '../api/tasks.js';
  
@@ -12,7 +13,7 @@ export default class Task extends Component {
   }
 
   deleteThisTask() {
-    Tasks.remove(this.props.task._id);
+    Meteor.call('tasks.remove', this.props.task._id);
   }
 
   render() {
